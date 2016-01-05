@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2016 Console, Inc.
 # Copyright (C) 2014 The Android-x86 Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,3 +23,10 @@ PRODUCT_NAME := android_x86
 PRODUCT_BRAND := Android-x86
 PRODUCT_DEVICE := x86
 PRODUCT_MODEL := Generic Android-x86
+
+# Console: Added to force kernel back to 32-bit
+# This switch forces a 32-bit clean build of Android
+# This is good for devices that have driver or component issues with 64-bit
+# By default, the kernel will build as 64-bit in Mixed Mode for Lollipop and beyond
+#TARGET_KERNEL_ARCH := x86
+#TARGET_CPU_VARIANT := x86
